@@ -1,13 +1,6 @@
-import { cimKi } from "./fuggvenyek.js";
-import { kutyaKi } from "./fuggvenyek.js";
 import { kLista } from "./adatok.js";
+import Kartyak from "./Kartyak.js";
 
-//cimKi(cim);
-kLista.forEach(kutya => {
-    kutyaKi(kutya);
-})
+const divElem = $(".tartalomArc");
 
-const gombElem = $(".kivalaszt")
-gombElem.on("click", (event) => {
-    console.log(event.target);
-});
+new Kartyak(kLista, divElem)
